@@ -33,10 +33,9 @@ function Results({ totalCorrect, totalQuestion }) {
       )}
 
       <h2>
-        {totalCorrect} out of {totalQuestion} correct - (
-        {(totalCorrect / totalQuestion) * 100}%)
+        {totalCorrect} / {totalQuestion} correct answers in 3s
       </h2>
-      <button>Restart game</button>
+      <button>Play Again</button>
     </div>
   );
 }
