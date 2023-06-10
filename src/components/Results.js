@@ -1,14 +1,12 @@
 import React from "react";
+import "./Quiz.css";
+import { Link } from "react-router-dom";
 
-function Results({ totalCorrect, totalQuestion }) {
+function Results({ score, totalQuestion }) {
   return (
     <div className="final-results">
       <h1>Final Results</h1>
-      {totalCorrect === 6 ||
-      totalCorrect === 7 ||
-      totalCorrect === 8 ||
-      totalCorrect === 9 ||
-      totalCorrect === 10 ? (
+      {score >= 3 ? (
         <div>
           <p style={{ width: "20%", height: "20%", display: "inline-block" }}>
             <img
@@ -33,9 +31,11 @@ function Results({ totalCorrect, totalQuestion }) {
       )}
 
       <h2>
-        {totalCorrect} / {totalQuestion} correct answers in 3s
+        {score} / {totalQuestion} correct answers in 3s
       </h2>
-      <button>Play Again</button>
+      <Link to={"/quiz"}>
+        <button className="button-submit">Play Again</button>
+      </Link>
     </div>
   );
 }

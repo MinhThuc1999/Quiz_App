@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 function Home() {
+  const hanleClick = () => {};
   return (
     <div>
       <p className="home-logo">
@@ -11,9 +12,9 @@ function Home() {
         />
       </p>
       <p>
-        <button>
-          <Link to={"/quiz"}>Start Quiz!</Link>
-        </button>
+        <Link to={"/quiz"}>
+          <button className="button-submit">Start Quiz!</button>
+        </Link>
       </p>
     </div>
   );
