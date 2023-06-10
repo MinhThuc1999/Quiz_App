@@ -43,15 +43,16 @@ function Question({
 
   return (
     <div className="question-container">
-      <h1>Question {currQues + 1} :</h1>
+      <h1 style={{ color: "#ffffff" }}>Question {currQues + 1} :</h1>
 
       <div className="singleQuestion">
-        <h2>{questions[currQues].question}</h2>
+        <h2 style={{ color: "#ffffff" }}>{questions[currQues].question}</h2>
         <div className="options">
           {error && <Error child={error}></Error>}
           {options &&
             options.map((i) => (
               <button
+                style={{ cursor: "pointer", borderRadius: "10px" }}
                 className={`singleOption  ${selected && handleSelect(i)}`}
                 key={i}
                 onClick={() => handleCheck(i)}

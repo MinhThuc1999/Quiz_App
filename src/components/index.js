@@ -22,7 +22,7 @@ function Quiz({ questions, score, setScore, setQuestions }) {
     <div className="quiz-container">
       {questions ? (
         <>
-          <div className="quizInfo">Score : {score}</div>
+          <div className="quizScore">Score : {score}</div>
           <Question
             currQues={currQues}
             setCurrQues={setCurrQues}
